@@ -1,4 +1,6 @@
 
+# SQL injection vulnerability exists in novel-plus v4.3.0-RC1
+
 # The common/log/list interface of the novel-admin subsystem in the novel-plus system has SQL injection vulnerability.
 
 # novel-plus系统novel-admin子系统common/log/list接口存在SQL注入
